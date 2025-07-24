@@ -116,6 +116,46 @@
 <footer>
 	<p>&copy; 2025 Emmanuel Mamvura. Crafted with passion & code.</p>
 </footer>
+<script>
+  const toggle = document.getElementById('theme-toggle');
+
+  // Detect user preference from localStorage
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  // Initial theme setup
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.body.classList.add('dark');
+      toggle.textContent = '☀️';
+    } else {
+      document.body.classList.remove('dark');
+      toggle.textContent = '🌙';
+    }
+  }
+
+  // Apply saved or system preference
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(prefersDark ? 'dark' : 'light');
+  }
+
+  // Toggle on button click
+  toggle.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    toggle.textContent = isDark ? '☀️' : '🌙';
+  });
+
+  // Listen for system preference changes — only if user has NOT set a theme
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    const newPrefersDark = e.matches;
+    if (!localStorage.getItem('theme')) {
+      applyTheme(newPrefersDark ? 'dark' : 'light');
+    }
+  });
+</script>
 
 </body>
 </html>
