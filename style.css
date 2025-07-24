@@ -582,7 +582,7 @@ footer p {
   }
 
   .home {
-    background-color: #1a1a1a;
+    background:linear-gradient(120deg,rgba(78,168,255,0.09) 60%, rgba(50,60,80,0.13) 100%);
     box-shadow: 0 4px 24px rgba(255,255,255,0.05);
   }
 
@@ -619,12 +619,12 @@ footer p {
   }
 
   footer {
-    background: #0f0f0f;
+    background: linear-gradient(120deg,rgba(78,168,255,0.09) 60%, rgba(50,60,80,0.13) 100%);
     color: #aaa;
   }
 
   .contact {
-    background: linear-gradient(120deg, #1a1a1a 80%, #232323 100%);
+    background: linear-gradient(120deg,rgba(78,168,255,0.09) 60%, rgba(50,60,80,0.13) 100%);
     box-shadow: 0 4px 24px rgba(255,255,255,0.08);
   }
 }
