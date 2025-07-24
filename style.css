@@ -590,3 +590,29 @@ body.dark .contact {
   background: linear-gradient(120deg,rgba(78,168,255,0.09) 60%, rgba(50,60,80,0.13) 100%);
   box-shadow: 0 4px 24px rgba(255,255,255,0.08);
 }
+@media (max-width: 900px) {
+  .about {
+    padding: 20px;
+    min-height: 40vh;
+  }
+}
+@media (max-width: 600px) {
+  .about {
+    padding: 12px 4px;
+    border-radius: 10px;
+    min-height: 30vh;
+    margin: 24px 4px;
+  }
+  .me h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  .me h2 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+  .me p {
+    font-size: 0.98rem;
+    margin-top: 4px;
+  }
+}
